@@ -4,4 +4,20 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+   server: {
+    port: 3000,
+    open: true,
+  },
+  preview: {
+    port: 5000,
+  },
+  // ✅ React Router fallback
+  resolve: {
+    alias: {
+      '@': '/src',
+    },
+  },
+  build: {
+    outDir: 'dist',
+  },
 })

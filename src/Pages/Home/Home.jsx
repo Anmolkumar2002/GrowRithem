@@ -14,6 +14,7 @@ import FAQcard from '../../components/Card/FAQcard';
 import Card from '../../components/Card/Card';
 import ImgCard from '../../components/Card/ImgCard';
 import BlogCard from '../../components/Card/BlogCard';
+import ContactForm from '../../components/Form/ContactForm';
 
 
 const Home = () => {
@@ -314,25 +315,7 @@ const Home = () => {
                             <h1 className='text-3xl xl:text-4xl font-bold text-white'>
                                 Don't hesitate to contact us            
                             </h1>
-                            <form action="">
-                                <div className='w-full flex flex-row flex-wrap justify-between mt-8'>
-                                    <div className='w-full md:w-[48%] mt-2'>
-                                        <input className='w-full rounded p-3 placeholder:text-black' type="text"  placeholder='Your Name'/>                           
-                                    </div>
-                                    <div className='w-full md:w-[48%] mt-2'>
-                                        <input className='w-full rounded p-3 placeholder:text-black' type="email"  placeholder='Your Email'/>                    
-                                    </div>
-                                    <div className='w-full mt-2'>
-                                        <input className='w-full rounded p-3 placeholder:text-black' type="text"  placeholder='Services'/>  
-                                    </div>
-                                    <div className='w-full mt-2'>
-                                        <textarea className='w-full rounded p-3 h-40 placeholder:text-black' name="" id=""  placeholder='Message...'></textarea>   
-                                    </div>
-                                    <div className='w-full mt-2'>
-                                        <input className='w-full rounded p-3 bg-blue-800 text-white' type="submit" value="send message" />   
-                                    </div>
-                                </div>
-                            </form>
+                            <ContactForm />
                         </div>
                     </div>
                 </div>
