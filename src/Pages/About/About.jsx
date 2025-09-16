@@ -1,7 +1,12 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import backImg3 from '../../assets/images/bg_3.jpg'
+import contact from '../../assets/images/contact.jpg'
+import backImg1 from '../../assets/images/background.jpg'
 import { AppWindow, GlobeLock, MonitorSmartphone } from 'lucide-react'
+import BlogCard from '../../components/Card/BlogCard'
+import TestimonialSlider from '../../components/Slider/TestimonialSlider'
+import Footer from '../../components/Footer/Footer'
 
 const About = () => {
   return (
@@ -44,6 +49,69 @@ const About = () => {
                 </div>
             </div>
         </div>
+
+        <div className='mt-20 flex items-center justify-center'>
+            <div className='w-full md:w-[700px] lg:w-[900px] xl:w-[1100px] px-10 md:px-0'>
+                <div className='flex flex-col items-center md:flex-row'>
+                    <div className='md:w-1/2'>
+                        <img src={contact} alt="" className='object-cover h-[560px]' />
+                    </div>
+                    <div className='md:w-1/2 flex flex-col bg-blue-700 text-white sm:h-[560px] px-12 py-5'>
+                        <div className='flex flex-row justify-start mt-10'>
+                            <div className='flex flex-col'>
+                                <h1 className='text-4xl font-bold'>Consult us here in <span className='text-orange-400'>Grow Rithem</span></h1>
+                                <p className='text-md text-gray-300 mt-10'>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                            </div>
+                        </div>
+                        <div className='flex flex-row flex-wrap mt-10'>
+                            <div className='w-1/2 flex justify-start items-center mt-5'>
+                                <div className='mb-10'>
+                                    <h1 className='text-4xl font-bold'>750</h1>
+                                    <p className='text-md text-gray-300 mt-2 text-wrap'>Project Complete</p>
+                                </div>
+                            </div>
+                            <div className='w-1/2 flex justify-start items-center mt-5'>
+                                <div className='mb-10'>
+                                    <h1 className='text-4xl font-bold'>568</h1>
+                                    <p className='text-md text-gray-300 mt-2 text-wrap'>Happy Clients</p>
+                                </div>
+                            </div>
+                            <div className='w-1/2 flex justify-start items-center mt-5'>
+                                <div className='mb-10'>
+                                    <h1 className='text-4xl font-bold'>478</h1>
+                                    <p className='text-md text-gray-300 mt-2 text-wrap'>Business Partners</p>
+                                </div>
+                            </div>
+                            <div className='w-1/2 flex justify-start items-center mt-5'>
+                                <div className='mb-10'>
+                                    <h1 className='text-4xl font-bold'>780</h1>
+                                    <p className='text-md text-gray-300 mt-2 text-wrap'>IT Consultant</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div className="h-screen bg-fixed bg-cover bg-center"  style={{ backgroundImage: `url(${backImg1})` }}>
+            <div className="h-full w-full bg-black/50">
+                <div className='pt-32'>
+                    <div className='flex items-center justify-center'>
+                        <div className='w-full lg:w-[990px] xl:w-[1100px] px-10 lg:px-0 flex flex-col items-center justify-center'>
+                            <h1 className="text-4xl md:text-5xl font-bold text-white">
+                                Our insights & creative ideas            
+                            </h1>
+                        </div>
+                    </div>
+                    <div>
+                        <TestimonialSlider />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <Footer />
 
     </>
   )
