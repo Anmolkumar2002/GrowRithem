@@ -4,6 +4,7 @@ import backImg3 from '../../assets/images/bg_3.jpg'
 import backImg2 from '../../assets/images/bg_2.jpg'
 import Footer from '../../components/Footer/Footer'
 import ContactForm from '../../components/Form/ContactForm'
+import { Earth, EarthIcon, Map, MapPin, PhoneCall, Send, ServerIcon } from 'lucide-react'
 
 const Contactus = () => {
   return (
@@ -21,7 +22,52 @@ const Contactus = () => {
             </div>
         </div>
 
-        
+        <div className='mt-20 mb-20 flex items-center justify-center'>
+            <div className='w-full px-10 md:px-0 md:w-[1100px]'>
+                <div className='flex flex-row flex-wrap'>
+                    <div className='w-1/4 flex flex-col items-center justify-center'>
+                        <div className="mb-5 w-24 h-24 bg-blue-800 rounded-full p-8 ">
+                            <MapPin className='w-8 h-8 text-white'/>
+                        </div>
+                        <div>
+                            <p className='text-xl text-gray-600 '>
+                                <span className='font-semibold text-black'>Address:</span> New Ashok Nagar, New Delhi, India
+                            </p>
+                        </div>
+                    </div>
+                    <div className='w-1/4 flex flex-col items-center justify-center'>
+                        <div className="mb-5 w-24 h-24 bg-blue-800 rounded-full p-8 ">
+                            <PhoneCall className='w-8 h-8 text-white'/>
+                        </div>
+                        <div>
+                            <p className='text-xl text-blue-600 '>
+                                <span className='font-semibold text-black'>Address:</span> New Ashok Nagar, New Delhi, India
+                            </p>
+                        </div>
+                    </div>
+                    <div className='w-1/4 flex flex-col items-center justify-center'>
+                        <div className="mb-5 w-24 h-24 bg-blue-800 rounded-full p-8 ">
+                            <Send className='w-8 h-8 text-white'/>
+                        </div>
+                        <div>
+                            <p className='text-xl text-blue-600 '>
+                                <span className='font-semibold text-black'>Address:</span> New Ashok Nagar, New Delhi, India
+                            </p>
+                        </div>
+                    </div>
+                    <div className='w-1/4 flex flex-col items-center justify-center'>
+                        <div className="mb-5 w-24 h-24 bg-blue-800 rounded-full p-8 ">
+                            <Earth className='w-8 h-8 text-white'/>
+                        </div>
+                        <div>
+                            <p className='text-xl text-blue-600 '>
+                                <span className='font-semibold text-black'>Address:</span> New Ashok Nagar, New Delhi, India
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div className="h-screen bg-fixed bg-cover bg-top"  style={{ backgroundImage: `url(${backImg2})` }}>
             <div className="h-full w-full bg-black/20">
