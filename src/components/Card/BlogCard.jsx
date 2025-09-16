@@ -45,8 +45,6 @@ const BlogCard = () => {
                 </div>
             </div>
         </div>
-
-        <Footer />
     </>
   )
 }

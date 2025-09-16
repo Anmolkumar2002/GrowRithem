@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import backImg3 from '../../assets/images/bg_3.jpg'
 import BlogCard from '../../components/Card/BlogCard'
+import Footer from '../../components/Footer/Footer'
 
 const Blog = () => {
   return (
@@ -20,6 +21,8 @@ const Blog = () => {
         </div>
 
         <BlogCard/>
+
+        <Footer />
     </>
   )
 }
