@@ -2,6 +2,7 @@ import React from 'react'
 import image1 from '../../assets/images/image_1.jpg'
 import image2 from '../../assets/images/image_2.jpg'
 import image3 from '../../assets/images/image_3.jpg'
+import Footer from '../Footer/Footer'
 
 const BlogCard = () => {
     const blogCards = [
@@ -18,7 +19,7 @@ const BlogCard = () => {
         {
             id: 3,
             image: image3,
-            text: "Why Lead Generation is Key for Business Growth.",
+            text: "Why Lead Generation is Key for Business Growth.",    
         },
     ];
   return (
@@ -44,6 +45,8 @@ const BlogCard = () => {
                 </div>
             </div>
         </div>
+
+        <Footer />
     </>
   )
 }
