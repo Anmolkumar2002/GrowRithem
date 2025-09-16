@@ -33,11 +33,11 @@ const Navbar = () => {
           {isOpen && (
             <div className="absolute top-16 left-0 w-full bg-black text-white lg:hidden">
               <ul className="flex flex-col items-center space-y-4 py-4 font-medium">
-                <li className="hover:text-blue-800 cursor-pointer"><Link to="/">Home</Link></li>
-                <li className="hover:text-blue-800 cursor-pointer"><Link to="/services">Services</Link></li>
-                <li className="hover:text-blue-800 cursor-pointer"><Link to="/about">About</Link></li>
-                <li className="hover:text-blue-800 cursor-pointer"><Link to="/blog">Blog</Link></li>
-                <li className="hover:text-blue-800 cursor-pointer"><Link to="/contact">Contact us</Link></li>
+                <li><NavLink to="/" className={({ isActive }) =>isActive ? "text-blue-800" : "hover:text-blue-800 cursor-pointer"}>Home</NavLink></li>
+                <li><NavLink to="/services" className={({ isActive }) =>isActive ? "text-blue-800" : "hover:text-blue-800 cursor-pointer"}>Services</NavLink></li>
+                <li><NavLink to="/about" className={({ isActive }) =>isActive ? "text-blue-800" : "hover:text-blue-800 cursor-pointer"}>About</NavLink></li>
+                <li><NavLink to="/blog" className={({ isActive }) =>isActive ? "text-blue-800" : "hover:text-blue-800 cursor-pointer"}>Blog</NavLink></li>
+                <li><NavLink to="/contact" className={({ isActive }) =>isActive ? "text-blue-800" : "hover:text-blue-800 cursor-pointer"}>Contact us</NavLink></li>
               </ul>
             </div>
           )}

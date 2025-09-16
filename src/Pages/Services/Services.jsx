@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import backImg3 from '../../assets/images/bg_3.jpg'
-
 import { AppWindow, Code, Database, GlobeLock, MonitorSmartphone, Palette, Shield } from 'lucide-react'
 import Card from '../../components/Card/Card'
 import ImgCard from '../../components/Card/ImgCard'
