@@ -55,13 +55,13 @@ const Footer = () => {
                                 <li>
                                     <a className='flex space-x-3' href="#">
                                         <span><Phone /></span>
-                                        <span>+91 9660679705</span>
+                                        <span>+91 9910137726</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a className='flex space-x-3' href="#">
                                         <span><Send /></span>
-                                        <span>anmol@gmail.com</span>
+                                        <span>Dheeraj@gmail.com</span>
                                     </a>
                                 </li>
                             </ul>
@@ -69,7 +69,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='mt-20 flex px-5 md:px-0 items-center justify-center text-center text-gray-300  tracking-wider leading-7 pb-8'> 
-                    <p>Copyright ©2025 All rights reserved | This template is made by Anmol</p>
+                    <p>Copyright ©2025 All rights reserved | This template is made by Dheeraj</p>
                 </div>           
             </div>
         </div>
