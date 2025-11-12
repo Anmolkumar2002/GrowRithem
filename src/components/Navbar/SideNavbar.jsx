@@ -5,7 +5,7 @@ const SideNavbar = ({ isOpen}) => {
   return (
     <>
     <div className={`fixed top-12 left-0 w-full z-50 transform transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
-        <div className='w-1/6 h-screen bg-gray-950 text-gray-400'>
+        <div className='w-[250px] h-screen bg-gray-950 text-gray-400'>
             <div className='flex flex-col mx-7 pt-8 space-y-8'>
                 <div className='flex'>
                     <p className='font-bold'>Core</p>

@@ -1,10 +1,23 @@
 import { ChevronDown, CircleUser, Contact, Contact2Icon, Menu } from 'lucide-react'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import SideNavbar from './SideNavbar';
 
 const AdminNavbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [isSidenav, setIsSidenav] = useState(false)
+    const [isSidenav, setIsSidenav] = useState(window.innerWidth >= 1024);
+
+    useEffect(() => {
+        const handleResize = () => {
+        if (window.innerWidth < 1024) {
+            setIsSidenav(false);
+        } else {
+            setIsSidenav(true);
+        }
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
   return (
     <>
         <nav className='fixed top-0 left-0 w-full h-12 bg-gray-950 text-white'>
