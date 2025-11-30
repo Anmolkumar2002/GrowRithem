@@ -1,55 +1,35 @@
-import { ChevronDown, CircleUser, Contact, Contact2Icon, Menu } from 'lucide-react'
-import React, { useEffect, useState } from 'react'
-import SideNavbar from './SideNavbar';
+import { ChevronDown, CircleUser, Menu } from 'lucide-react';
+import React, { useState } from 'react';
 
-const AdminNavbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isSidenav, setIsSidenav] = useState(window.innerWidth >= 1024);
+const AdminNavbar = ({ toggleSide }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-    useEffect(() => {
-        const handleResize = () => {
-        if (window.innerWidth < 1024) {
-            setIsSidenav(false);
-        } else {
-            setIsSidenav(true);
-        }
-        };
-
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
   return (
     <>
-        <nav className='fixed top-0 left-0 w-full h-12 bg-gray-950 text-white'>
-            <div className='flex justify-between mx-8 pt-2'>
-                <div className='flex space-x-28 justify-center items-center'>
-                    <h1 className='text-xl'>Admin Panel</h1>
-                    <Menu className='hidden lg:flex size-5 stroke-[3] text-gray-400 hover:text-gray-300 cursor-pointer transition' onClick={() =>setIsSidenav(!isSidenav)} />
-                </div>
-                <div className='flex justify-center items-center space-x-1 group'>
-                    <CircleUser className='size-5 stroke-[3] text-gray-400 group-hover:text-gray-300 cursor-pointer' onClick={() => setIsOpen(!isOpen)}/>
-                    <ChevronDown className='size-5 stroke-[3] text-gray-400 group-hover:text-gray-300 cursor-pointer' onClick={() => setIsOpen(!isOpen)}/>
-                    {isOpen && (
-                        <div className="absolute right-0 top-10 w-40 bg-white text-black rounded-md shadow-lg py-2">
-                            <ul>
-                                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Settings</li>
-                                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">Activity Log</li>
-                                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer border-t border-gray-200">Logout</li>
-                            </ul>
-                        </div>
-                    )}
-                    <div className="block lg:hidden">
-                        <Menu className="size-5 stroke-[3] text-gray-400 hover:text-gray-300 cursor-pointer transition" onClick={() =>setIsSidenav(!isSidenav)}/>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        {/* {isSidenav && (
-            <SideNavbar />
-        )} */}
-        <SideNavbar isOpen={isSidenav} />
+      <nav className='fixed top-0 left-0 w-full h-12 bg-gray-950 text-white z-[999]'>
+        <div className='flex justify-between mx-8 pt-2'>
+          <div className='flex space-x-28 items-center'>
+            <h1 className='text-xl'>Admin Panel</h1>
+            <Menu className='hidden lg:block size-5 cursor-pointer text-gray-400 hover:text-gray-200' onClick={toggleSide}/>
+          </div>
+          <div className='flex items-center space-x-2 relative'>
+            <CircleUser className='size-5 cursor-pointer' onClick={() => setIsOpen(!isOpen)}/>
+            <ChevronDown className='size-5 cursor-pointer' onClick={() => setIsOpen(!isOpen)}/>
+            {isOpen && (
+              <div className='absolute right-0 top-8 bg-white text-black w-40 rounded shadow'>
+                <ul>
+                  <li className='px-4 py-2 hover:bg-gray-200'>Settings</li>
+                  <li className='px-4 py-2 hover:bg-gray-200'>Activity Log</li>
+                  <li className='px-4 py-2 hover:bg-gray-200 border-t'>Logout</li>
+                </ul>
+              </div>
+            )}
+            <Menu className='lg:hidden size-5 cursor-pointer'onClick={toggleSide}/>
+          </div>
+        </div>
+      </nav>
     </>
-  )
-}
+  );
+};
 
-export default AdminNavbar
+export default AdminNavbar;
