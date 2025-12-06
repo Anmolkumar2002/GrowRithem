@@ -133,14 +133,8 @@ const Home = () => {
         <div className="h-screen bg-fixed bg-cover bg-center" style={{ backgroundImage: `url(${backImg1})` }}>
             <div className="h-full w-full  flex flex-col items-center text-center justify-center bg-black/50">
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-                    Welcome to My Website
+                    Transforming Ideas into Scalable Solution
                 </h1>
-                <p className="text-lg md:text-xl mb-6">
-                    This is a beautiful banner with text on top
-                </p>
-                <button className="bg-blue-600 px-6 py-2 rounded-lg hover:bg-blue-700">
-                    Get Started
-                </button>
             </div>
         </div>
 
