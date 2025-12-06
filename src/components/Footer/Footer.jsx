@@ -50,7 +50,7 @@ const Footer = () => {
                             <ul className='mt-8 text-gray-300 space-y-5'>
                                 <li className='flex space-x-3'>
                                     <span><MapPin /></span>
-                                    <span className='md:tracking-wider md:leading-7'>New Ashok Nagar, New Delhi, India</span>
+                                    <span className='md:tracking-wider md:leading-7'>Biscomaun Bhawan, Gandhi Maidan, Patna</span>
                                 </li>
                                 <li>
                                     <a className='flex space-x-3' href="#">
@@ -61,7 +61,7 @@ const Footer = () => {
                                 <li>
                                     <a className='flex space-x-3' href="#">
                                         <span><Send /></span>
-                                        <span>anmol@gmail.com</span>
+                                        <span>growrithem@gmail.com</span>
                                     </a>
                                 </li>
                             </ul>
