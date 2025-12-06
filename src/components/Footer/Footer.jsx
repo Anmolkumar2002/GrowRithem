@@ -69,7 +69,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='mt-20 flex px-5 md:px-0 items-center justify-center text-center text-gray-300  tracking-wider leading-7 pb-8'> 
-                    <p>Copyright ©2025 All rights reserved | This template is made by Anmol</p>
+                    <p>Copyright ©2025 All rights reserved{/*  | This template is made by Anmol*/}</p> 
                 </div>           
             </div>
         </div>
