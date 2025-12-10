@@ -127,7 +127,7 @@ const Home = () => {
  
   return (
     <>
-        
+            
         <Navbar />
 
         <div className="h-screen bg-fixed bg-cover bg-center" style={{ backgroundImage: `url(${backImg1})` }}>
